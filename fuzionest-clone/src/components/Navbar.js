@@ -1,40 +1,43 @@
-// components/Navbar.js
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-100 border-b border-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        {/* Logo */}
-        <div className="flex-shrink-0">
-          <Image src="/logo.png" alt="Logo" width={50} height={50} />
-        </div>
+    <nav className="flex items-center justify-between bg-[#dcdcdb] px-8 py-4 shadow-md">
+      {/* Logo */}
+      <div className="flex items-center">
+        <Image src="/Images/Logo.png" alt="Logo" width={50} height={50} />
+      </div>
 
-        {/* Navigation Links */}
-        <div className="hidden md:flex space-x-8">
-          <a href="#" className="text-black hover:text-gray-700">
+      {/* Links */}
+      <ul className="flex space-x-8">
+        <li>
+          <Link href="#" className="text-gray-700 hover:text-gray-900">
             What We Do
-          </a>
-          <a href="#" className="text-black hover:text-gray-700">
+          </Link>
+        </li>
+        <li>
+          <Link href="#" className="text-gray-700 hover:text-gray-900">
             How We Engage
-          </a>
-          <a href="#" className="text-black hover:text-gray-700">
+          </Link>
+        </li>
+        <li>
+          <Link href="#" className="text-gray-700 hover:text-gray-900">
             Tailored Solutions
-          </a>
-          <a href="#" className="text-black hover:text-gray-700">
+          </Link>
+        </li>
+        <li>
+          <Link href="#" className="text-gray-700 hover:text-gray-900">
             Who We Are
-          </a>
-        </div>
+          </Link>
+        </li>
+      </ul>
 
-        {/* Contact Us Button */}
-        <div className="hidden md:block">
-          <a
-            href="#"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >
-            Contact Us
-          </a>
-        </div>
+      {/* Contact Us Button */}
+      <div>
+        <Link href="#" className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+          Contact Us
+        </Link>
       </div>
     </nav>
   );
