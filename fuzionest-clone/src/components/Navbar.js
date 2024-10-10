@@ -10,7 +10,7 @@ const Navbar = () => {
       </div>
 
       {/* Links */}
-      <ul className="flex space-x-8">
+      <ul className="flex space-x-12 text-lg font-semibold ml-auto">
         <li>
           <Link href="#" className="text-gray-700 hover:text-gray-900">
             What We Do
@@ -34,8 +34,8 @@ const Navbar = () => {
       </ul>
 
       {/* Contact Us Button */}
-      <div>
-        <Link href="#" className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+      <div className="ml-8">
+        <Link href="#" className="bg-blue-600 text-white text-lg px-8 py-3 rounded-md hover:bg-blue-700">
           Contact Us
         </Link>
       </div>
