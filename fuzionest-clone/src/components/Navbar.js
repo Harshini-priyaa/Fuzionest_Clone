@@ -35,8 +35,9 @@ const Navbar = () => {
 
       {/* Contact Us Button */}
       <div className="ml-8">
-        <Link href="#" className="bg-blue-600 text-white text-lg px-8 py-3 rounded-md hover:bg-blue-700">
-          Contact Us
+        <Link href="#" className="relative inline-block bg-blue-600 text-white text-lg px-8 py-3 rounded-md transition-all duration-500 ease-out overflow-hidden group">
+          <span className="relative z-10">Contact Us</span>
+          <span className="absolute inset-0 bg-black transform translate-x-[-120%] -skew-x-12 group-hover:translate-x-0 group-hover:skew-x-0 transition-all duration-500 ease-out rounded-md"></span>
         </Link>
       </div>
     </nav>
