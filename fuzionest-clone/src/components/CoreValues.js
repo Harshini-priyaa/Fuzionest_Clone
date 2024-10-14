@@ -12,7 +12,7 @@ const CoreValues = () => {
             {/* Value 1 */}
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex justify-center mb-6">
-                <img src="/path-to-icon/iterate-icon.png" alt="Iterate to Success Icon" className="h-16 w-16" />
+                <img src="Images/iterate-icon.png" alt="Iterate to Success Icon" className="h-16 w-16" />
               </div>
               <h3 className="font-bold text-lg mb-4">We Iterate to Success</h3>
               <p className="text-gray-600">Success isn’t a straight path. We embrace our mistakes, learn from them, and use those lessons to advance toward our goals.</p>
@@ -21,7 +21,7 @@ const CoreValues = () => {
             {/* Value 2 */}
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex justify-center mb-6">
-                <img src="/path-to-icon/growth-icon.png" alt="Personal Growth Icon" className="h-16 w-16" />
+                <img src="Images/growth-icon.png" alt="Personal Growth Icon" className="h-16 w-16" />
               </div>
               <h3 className="font-bold text-lg mb-4">We Encourage Personal Growth</h3>
               <p className="text-gray-600">Great companies are built by great people. We support our employees in becoming the best versions of themselves, both personally and professionally.</p>
@@ -30,7 +30,7 @@ const CoreValues = () => {
             {/* Value 3 */}
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex justify-center mb-6">
-                <img src="/path-to-icon/extra-mile-icon.png" alt="Extra Mile Icon" className="h-16 w-16" />
+                <img src="Images/extra-mile .png" alt="Extra Mile Icon" className="h-16 w-16" />
               </div>
               <h3 className="font-bold text-lg mb-4">We Go the Extra Mile</h3>
               <p className="text-gray-600">Settling for mediocrity is easy. We strive to exceed expectations, whether tackling internal challenges or serving our customers.</p>
