@@ -6,6 +6,7 @@ import CoreValues from "@/components/CoreValues";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
 import WhyFuzionest from "@/components/WhyFuzionest";
+import ImageGrid from "@/components/ImageGrid";
 const geistSans = localFont(
   {
   src: "./fonts/GeistVF.woff",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         <HeroSection />
+        <ImageGrid />
         <WhyFuzionest />
         <About />
         <CoreValues/>

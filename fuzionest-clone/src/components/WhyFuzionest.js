@@ -22,11 +22,6 @@ export default function WhyFuzionest() {
       content: `“We understand that time is of the essence in today's fast-paced business environment. Our proven project 
         management methodologies and efficient processes allow us to deliver projects on time, without compromising on 
         quality. We believe in setting realistic timelines and sticking to them.”`
-    },
-    {
-      title: "Client-Focused Approach",
-      content: `“At Fuzionest, our clients are at the center of everything we do. We work closely with our clients to understand 
-        their challenges and develop solutions that exceed their expectations.”`
     }
   ];
 
@@ -41,7 +36,7 @@ export default function WhyFuzionest() {
       }
     };
 
-    const interval = setInterval(scrollCarousel, 10); // Speed of the scroll
+    const interval = setInterval(scrollCarousel, 20); // Speed of the scroll
 
     return () => clearInterval(interval);
   }, []);
