@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes circularZoom {
+    0% {
+      clip-path: circle(0% at 50% 50%);
+      transform: scale(1.5);
+    }
+    100% {
+      clip-path: circle(150% at 50% 50%);
+      transform: scale(1);
+    }
+  }
+  
+  .animate-circularZoom {
+    animation: circularZoom 1.5s ease-out forwards;
+  }
+  

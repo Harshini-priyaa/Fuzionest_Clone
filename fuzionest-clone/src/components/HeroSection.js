@@ -1,8 +1,18 @@
+"use client"; // Ensure it's a Client Component
+
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const HeroSection = () => {
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  useEffect(() => {
+    // Trigger the circular zoom-out effect when the component mounts
+    setIsZoomed(true);
+  }, []);
+
   return (
-    <div className="relative h-[calc(100vh-80px)] overflow-hidden"> {/* Adjusted height */}
+    <div className={`relative min-h-screen overflow-hidden transition-transform duration-1000 ease-out ${isZoomed ? 'animate-circularZoom' : ''}`}>
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image 
@@ -18,7 +28,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       {/* Text Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 space-y-6 -mt-16"> {/* Moved content up */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 space-y-6" style={{ paddingTop: '120px', paddingBottom: '120px' }}> {/* Added padding to push content down */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
           Redefining IT Functions
         </h1>
