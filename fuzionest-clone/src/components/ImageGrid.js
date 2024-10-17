@@ -4,7 +4,7 @@ const ImageGrid = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-0 w-full mx-auto">
 
-      {/* First Image Card - Updated Hover */}
+      {/* First Image Card - Fixed Hover Overlay */}
       <div className="relative h-[350px] md:h-[550px] lg:h-[650px] group overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
         <Image 
           src="/Images/server.jpg" 
@@ -13,21 +13,22 @@ const ImageGrid = () => {
           objectFit="cover" 
           className="pointer-events-none"
         />
-        {/* Heading - Subtle hover movement */}
-        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:translate-y-[-10%] pointer-events-none">
+        {/* Heading - Set z-index to ensure it stays on top */}
+        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:translate-y-[-10%] pointer-events-none z-20">
           <h2 className="text-white text-center px-4 text-xl md:text-3xl lg:text-4xl font-bold tracking-wide"
               style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>
             Elite Multi-Tenancy: Superior Server Orchestration and Security
           </h2>
         </div>
         {/* Description and Button */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 group-hover:translate-y-[-5%] transition-all duration-500 ease-out text-center px-4">
+        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 group-hover:translate-y-[-5%] transition-all duration-500 ease-out text-center px-4 z-30">
           <p className="text-white text-md md:text-lg lg:text-xl mb-4 leading-relaxed"
              style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>
             Experience the pinnacle of multi-tenant applications, featuring top-tier server orchestration and robust security protocols for unparalleled performance.
           </p>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-600 hover:scale-105 transition-transform duration-300">
-            Learn More
+          <button className="relative inline-block bg-blue-600 text-white text-lg px-8 py-3 transition-all duration-500 ease-out overflow-hidden group">
+            <span className="relative z-10">Learn More</span>
+            <span className="absolute inset-0 bg-black transform translate-x-[-120%] -skew-x-12 group-hover:translate-x-0 group-hover:skew-x-0 transition-all duration-500 ease-out"></span>
           </button>
         </div>
       </div>
@@ -41,19 +42,20 @@ const ImageGrid = () => {
           objectFit="cover" 
           className="pointer-events-none"
         />
-        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:translate-y-[-25%] pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:translate-y-[-25%] pointer-events-none z-20">
           <h2 className="text-white text-center px-4 text-xl md:text-3xl lg:text-4xl font-bold tracking-wide"
               style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>
             Strategic Fusion: Consulting Meets Vision
           </h2>
         </div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 group-hover:translate-y-[-10%] transition-all duration-500 ease-out text-center px-4">
+        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 group-hover:translate-y-[-10%] transition-all duration-500 ease-out text-center px-4 z-30">
           <p className="text-white text-md md:text-lg lg:text-xl mb-4 leading-relaxed"
              style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>
             Unlock the full potential of consulting services, combining strategic thinking with cutting-edge execution for success.
           </p>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-600 hover:scale-105 transition-transform duration-300">
-            Learn More
+          <button className="relative inline-block bg-blue-600 text-white text-lg px-8 py-3 transition-all duration-500 ease-out overflow-hidden group">
+            <span className="relative z-10">Learn More</span>
+            <span className="absolute inset-0 bg-black transform translate-x-[-120%] -skew-x-12 group-hover:translate-x-0 group-hover:skew-x-0 transition-all duration-500 ease-out"></span>
           </button>
         </div>
       </div>
@@ -67,19 +69,20 @@ const ImageGrid = () => {
           objectFit="cover" 
           className="pointer-events-none"
         />
-        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:translate-y-[-25%] pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:translate-y-[-25%] pointer-events-none z-20">
           <h2 className="text-white text-center px-4 text-xl md:text-3xl lg:text-4xl font-bold tracking-wide"
               style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>
             Rapid Customization - Accelerated ERP and Back Office Solutions
           </h2>
         </div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 group-hover:translate-y-[-10%] transition-all duration-500 ease-out text-center px-4">
+        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 group-hover:translate-y-[-10%] transition-all duration-500 ease-out text-center px-4 z-30">
           <p className="text-white text-md md:text-lg lg:text-xl mb-4 leading-relaxed"
              style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>
             Tailor your enterprise solutions quickly and efficiently to keep up with the fast-changing demands of modern business.
           </p>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-600 hover:scale-105 transition-transform duration-300">
-            Learn More
+          <button className="relative inline-block bg-blue-600 text-white text-lg px-8 py-3 transition-all duration-500 ease-out overflow-hidden group">
+            <span className="relative z-10">Learn More</span>
+            <span className="absolute inset-0 bg-black transform translate-x-[-120%] -skew-x-12 group-hover:translate-x-0 group-hover:skew-x-0 transition-all duration-500 ease-out"></span>
           </button>
         </div>
       </div>
@@ -93,19 +96,20 @@ const ImageGrid = () => {
           objectFit="cover" 
           className="pointer-events-none"
         />
-        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:translate-y-[-25%] pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:translate-y-[-25%] pointer-events-none z-20">
           <h2 className="text-white text-center px-4 text-xl md:text-3xl lg:text-4xl font-bold tracking-wide"
               style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>
             Smart Automation: Boosting Workforce Efficiency with GEN-AI
           </h2>
         </div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 group-hover:translate-y-[-10%] transition-all duration-500 ease-out text-center px-4">
+        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 group-hover:translate-y-[-10%] transition-all duration-500 ease-out text-center px-4 z-30">
           <p className="text-white text-md md:text-lg lg:text-xl mb-4 leading-relaxed"
              style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>
             Maximize workforce potential with AI-driven automation, improving efficiency across the board.
           </p>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-600 hover:scale-105 transition-transform duration-300">
-            Learn More
+          <button className="relative inline-block bg-blue-600 text-white text-lg px-8 py-3 transition-all duration-500 ease-out overflow-hidden group">
+            <span className="relative z-10">Learn More</span>
+            <span className="absolute inset-0 bg-black transform translate-x-[-120%] -skew-x-12 group-hover:translate-x-0 group-hover:skew-x-0 transition-all duration-500 ease-out"></span>
           </button>
         </div>
       </div>
