@@ -30,7 +30,7 @@ const CoreValues = () => {
             {/* Value 3 */}
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex justify-center mb-6">
-                <img src="Images/extra-mile .png" alt="Extra Mile Icon" className="h-16 w-16" />
+                <img src="Images/extra-mile.png" alt="Extra Mile Icon" className="h-16 w-16" />
               </div>
               <h3 className="font-bold text-lg mb-4">We Go the Extra Mile</h3>
               <p className="text-gray-600">Settling for mediocrity is easy. We strive to exceed expectations, whether tackling internal challenges or serving our customers.</p>

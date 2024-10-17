@@ -17,3 +17,33 @@
     animation: circularZoom 1.5s ease-out forwards;
   }
   
+  @layer components {
+    .btn-hover {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-hover::before {
+      content: '';
+      position: absolute;
+      top: 150%;
+      left: -150%;
+      width: 300%;
+      height: 300%;
+      background-color: black;
+      transition: all 0.5s ease-in-out;
+      z-index: 1;
+      transform: rotate(45deg);
+    }
+  
+    .btn-hover:hover::before {
+      top: -150%;
+      left: 150%;
+    }
+  
+    .btn-hover:hover span {
+      color: white;
+      z-index: 10;
+    }
+  }
+  
