@@ -12,15 +12,15 @@ const ImageGrid = () => {
           objectFit="cover"
           className="pointer-events-none"
         />
-        <div className="absolute inset-0 flex items-center justify-center transition-all duration-500 ease-out pointer-events-none z-20">
-          <h2 className="text-white text-center px-6 py-4 text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide"
+        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out z-20 group-hover:translate-y-[-40px]">
+          <h2 className="text-white text-center px-6 py-4 text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide transition-transform duration-500 ease-out"
             style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
           >
             Elite Multi-Tenancy: Superior Server Orchestration and Security
           </h2>
         </div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-500 ease-out text-center px-6 py-4 z-30">
-          <p className="text-white text-sm sm:text-md md:text-xl lg:text-2xl mb-4 leading-relaxed"
+        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out text-center px-6 py-4 z-10 bg-black/50 group-hover:translate-y-0">
+          <p className="text-white text-sm sm:text-md md:text-xl lg:text-2xl mb-4 leading-relaxed transition-opacity duration-500 ease-out"
             style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
           >
             Experience the pinnacle of multi-tenant applications, featuring top-tier server orchestration and robust security protocols for unparalleled performance.
@@ -41,15 +41,15 @@ const ImageGrid = () => {
           objectFit="cover"
           className="pointer-events-none"
         />
-        <div className="absolute inset-0 flex items-center justify-center transition-all duration-500 ease-out pointer-events-none z-20">
-          <h2 className="text-white text-center px-6 py-4 text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide"
+        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out z-20 group-hover:translate-y-[-40px]">
+          <h2 className="text-white text-center px-6 py-4 text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide transition-transform duration-500 ease-out"
             style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
           >
             Strategic Fusion: Consulting Meets Vision
           </h2>
         </div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-500 ease-out text-center px-6 py-4 z-30">
-          <p className="text-white text-sm sm:text-md md:text-xl lg:text-2xl mb-4 leading-relaxed"
+        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out text-center px-6 py-4 z-10 bg-black/50 group-hover:translate-y-0">
+          <p className="text-white text-sm sm:text-md md:text-xl lg:text-2xl mb-4 leading-relaxed transition-opacity duration-500 ease-out"
             style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
           >
             Unlock the full potential of consulting services, combining strategic thinking with cutting-edge execution for success.
@@ -70,15 +70,15 @@ const ImageGrid = () => {
           objectFit="cover"
           className="pointer-events-none"
         />
-        <div className="absolute inset-0 flex items-center justify-center transition-all duration-500 ease-out pointer-events-none z-20">
-          <h2 className="text-white text-center px-6 py-4 text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide"
+        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out z-20 group-hover:translate-y-[-40px]">
+          <h2 className="text-white text-center px-6 py-4 text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide transition-transform duration-500 ease-out"
             style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
           >
             Rapid Customization - Accelerated ERP and Back Office Solutions
           </h2>
         </div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-500 ease-out text-center px-6 py-4 z-30">
-          <p className="text-white text-sm sm:text-md md:text-xl lg:text-2xl mb-4 leading-relaxed"
+        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out text-center px-6 py-4 z-10 bg-black/50 group-hover:translate-y-0">
+          <p className="text-white text-sm sm:text-md md:text-xl lg:text-2xl mb-4 leading-relaxed transition-opacity duration-500 ease-out"
             style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
           >
             Tailor your enterprise solutions quickly and efficiently to keep up with the fast-changing demands of modern business.
@@ -99,15 +99,15 @@ const ImageGrid = () => {
           objectFit="cover"
           className="pointer-events-none"
         />
-        <div className="absolute inset-0 flex items-center justify-center transition-all duration-500 ease-out pointer-events-none z-20">
-          <h2 className="text-white text-center px-6 py-4 text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide"
+        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out z-20 group-hover:translate-y-[-40px]">
+          <h2 className="text-white text-center px-6 py-4 text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide transition-transform duration-500 ease-out"
             style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
           >
             Smart Automation: Boosting Workforce Efficiency with GEN-AI
           </h2>
         </div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-500 ease-out text-center px-6 py-4 z-30">
-          <p className="text-white text-sm sm:text-md md:text-xl lg:text-2xl mb-4 leading-relaxed"
+        <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out text-center px-6 py-4 z-10 bg-black/50 group-hover:translate-y-0">
+          <p className="text-white text-sm sm:text-md md:text-xl lg:text-2xl mb-4 leading-relaxed transition-opacity duration-500 ease-out"
             style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
           >
             Maximize workforce potential with AI-driven automation, improving efficiency across the board.
@@ -118,6 +118,7 @@ const ImageGrid = () => {
           </a>
         </div>
       </div>
+
     </div>
   );
 };
