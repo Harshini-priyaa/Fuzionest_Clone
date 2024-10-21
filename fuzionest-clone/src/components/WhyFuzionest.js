@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 export default function WhyFuzionest() {
@@ -26,20 +26,32 @@ export default function WhyFuzionest() {
   ];
 
   const carouselRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const carousel = carouselRef.current;
+    const updateSize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
 
+    window.addEventListener("resize", updateSize);
+    updateSize(); // Call it initially
+
+    const carousel = carouselRef.current;
+    
     const scrollCarousel = () => {
       if (carousel) {
-        carousel.scrollBy({ left: 1, behavior: 'smooth' });
+        const scrollAmount = isMobile ? 1 : 2; // Scroll faster on larger screens
+        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       }
     };
 
-    const interval = setInterval(scrollCarousel, 20); // Speed of the scroll
+    const interval = setInterval(scrollCarousel, isMobile ? 20 : 40); // Adjust scrolling speed based on screen size
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", updateSize);
+    };
+  }, [isMobile]);
 
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center py-16">
@@ -54,10 +66,10 @@ export default function WhyFuzionest() {
           />
         </div>
 
-        <h1 className="text-5xl font-bold text-gray-800 mb-4 text-center">
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4 text-center">
           Your privacy is our responsibility
         </h1>
-        <p className="text-base text-gray-600 text-center max-w-3xl mb-8">
+        <p className="text-base lg:text-lg text-gray-600 text-center max-w-3xl mb-8">
           We believe that trust is paramount in a relationship. We do not own or sell your data, 
           and we most certainly do not bank on advertising-based business models. 
           The only way we make money is from the software license fees you pay us.
@@ -70,34 +82,34 @@ export default function WhyFuzionest() {
       </div>
 
       {/* Why Fuzionest Section */}
-      <h1 className="text-5xl font-bold text-gray-800 mb-10 text-left">Why Fuzionest?</h1>
+      <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-10 text-center">Why Fuzionest?</h1>
 
       {/* Carousel Section */}
       <div
         ref={carouselRef}
-        className="relative w-full max-w-6xl flex overflow-hidden"
+        className="relative w-full max-w-6xl flex overflow-x-scroll lg:overflow-hidden"
         style={{ whiteSpace: 'nowrap' }}
       >
         {/* Slide */}
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-1/2 p-6"
+            className="flex-shrink-0 w-full lg:w-1/2 p-6" // Full width for mobile, 1/2 width for large screens
             style={{ whiteSpace: 'normal' }} // Allow normal text wrapping within the slide
           >
-            <h2 className="text-3xl font-semibold text-gray-800 mb-4">{slide.title}</h2>
-            <p className="text-lg text-gray-600 mb-8">{slide.content}</p>
+            <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 mb-4">{slide.title}</h2>
+            <p className="text-base lg:text-lg text-gray-600 mb-8">{slide.content}</p>
           </div>
         ))}
         {/* Duplicate the slides for continuous effect */}
         {slides.map((slide, index) => (
           <div
             key={index + slides.length}
-            className="flex-shrink-0 w-1/2 p-6"
+            className="flex-shrink-0 w-full lg:w-1/2 p-6" // Full width for mobile, 1/2 width for large screens
             style={{ whiteSpace: 'normal' }} // Allow normal text wrapping within the slide
           >
-            <h2 className="text-3xl font-semibold text-gray-800 mb-4">{slide.title}</h2>
-            <p className="text-lg text-gray-600 mb-8">{slide.content}</p>
+            <h2 className="text-2xl lg:text-3xl font-semibold text-gray-800 mb-4">{slide.title}</h2>
+            <p className="text-base lg:text-lg text-gray-600 mb-8">{slide.content}</p>
           </div>
         ))}
       </div>
